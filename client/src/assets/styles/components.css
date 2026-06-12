@@ -1,0 +1,110 @@
+/* Order detail specific */
+.order-progress {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 24px;
+  border: 1px solid var(--border);
+  overflow-x: auto;
+}
+.progress-step {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.progress-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--border);
+  border: 2px solid var(--border);
+  flex-shrink: 0;
+}
+.progress-step.done .progress-dot { background: var(--primary); border-color: var(--primary); }
+.progress-step.active .progress-dot { background: #fff; border: 3px solid var(--primary); box-shadow: 0 0 0 3px rgba(26,143,76,0.2); }
+.progress-step span {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-left: 6px;
+  white-space: nowrap;
+}
+.progress-step.done span { color: var(--primary); }
+.progress-step.active span { color: var(--text-primary); font-weight: 700; }
+.progress-line {
+  width: 40px;
+  height: 3px;
+  background: var(--border);
+  margin: 0 6px;
+}
+.progress-line.filled { background: var(--primary); }
+
+.order-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 20px;
+}
+.order-items-section {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px;
+  border: 1px solid var(--border);
+}
+.order-detail-item {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.order-detail-item:last-child { border-bottom: none; }
+.order-detail-item img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: var(--bg-secondary);
+  padding: 4px;
+  flex-shrink: 0;
+}
+.info-block {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  border: 1px solid var(--border);
+}
+.info-block h4 {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.info-block p {
+  font-size: 13px;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+
+/* Admin order detail panel */
+.order-detail-panel {
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  position: sticky;
+  top: 20px;
+}
+
+@media (max-width: 768px) {
+  .order-detail-grid { grid-template-columns: 1fr; }
+  .order-progress { padding: 16px; }
+  .progress-line { width: 20px; }
+}

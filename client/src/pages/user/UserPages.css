@@ -1,0 +1,52 @@
+.user-page { padding: 32px 0 60px; }
+.user-welcome { display: flex; align-items: center; gap: 20px; background: #fff; border-radius: 16px; padding: 28px; margin-bottom: 28px; border: 1px solid var(--border); }
+.user-avatar-lg { width: 72px; height: 72px; background: var(--primary); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 800; flex-shrink: 0; }
+.user-welcome h1 { font-size: 24px; font-weight: 800; margin-bottom: 4px; }
+.user-welcome p { color: var(--text-secondary); font-size: 14px; }
+.loyalty-badge { display: inline-flex; align-items: center; gap: 6px; background: #fef3c7; color: #92400e; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-top: 8px; }
+
+.dashboard-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.dashboard-card { background: var(--card-bg, var(--bg-secondary)); border-radius: 14px; padding: 24px; border: 1px solid var(--border); transition: var(--transition); }
+.dashboard-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.dashboard-card-icon { margin-bottom: 14px; color: var(--primary); }
+.dashboard-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+.dashboard-card p { font-size: 13px; color: var(--text-secondary); }
+
+.page-title { font-size: 22px; font-weight: 800; margin-bottom: 24px; }
+.orders-list { display: flex; flex-direction: column; gap: 16px; }
+.order-card { background: #fff; border-radius: 14px; padding: 20px; border: 1px solid var(--border); transition: var(--transition); }
+.order-card:hover { border-color: var(--primary); }
+.order-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 10px; }
+.order-number { font-size: 15px; font-weight: 700; color: var(--primary); }
+.order-date { font-size: 12px; color: var(--text-muted); }
+.order-items-preview { display: flex; gap: 8px; margin-bottom: 12px; overflow: hidden; }
+.order-item-name { font-size: 13px; color: var(--text-secondary); background: var(--bg-secondary); padding: 4px 10px; border-radius: 20px; white-space: nowrap; }
+.order-card-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 12px; border-top: 1px solid var(--border); }
+.order-total { font-size: 16px; font-weight: 700; }
+.order-status { padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; text-transform: capitalize; }
+.status-placed, .status-confirmed, .status-processing { background: #e3f2fd; color: #1565c0; }
+.status-shipped { background: #fff3e0; color: #e65100; }
+.status-delivered { background: #d1fae5; color: #065f46; }
+.status-cancelled, .status-returned { background: #fde8e8; color: var(--danger); }
+
+.wishlist-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+.prescriptions-list { display: flex; flex-direction: column; gap: 14px; }
+.prescription-card { background: #fff; border-radius: 12px; padding: 18px; border: 1px solid var(--border); display: flex; align-items: center; gap: 16px; }
+.prescription-icon { font-size: 32px; flex-shrink: 0; }
+.prescription-info { flex: 1; }
+.prescription-info h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+.prescription-info p { font-size: 13px; color: var(--text-secondary); }
+.rx-status { padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 700; }
+.rx-pending { background: #fef3c7; color: #92400e; }
+.rx-approved { background: #d1fae5; color: #065f46; }
+.rx-rejected { background: #fde8e8; color: var(--danger); }
+
+.upload-rx-form { background: var(--bg-secondary); border: 2px dashed var(--border); border-radius: 14px; padding: 32px; text-align: center; margin-bottom: 24px; }
+.upload-rx-form:hover { border-color: var(--primary); }
+.upload-rx-form p { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+
+.profile-form { background: #fff; border-radius: 14px; padding: 28px; border: 1px solid var(--border); }
+
+@media (max-width: 900px) { .dashboard-cards { grid-template-columns: repeat(2, 1fr); } .wishlist-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .dashboard-cards { grid-template-columns: 1fr 1fr; } }

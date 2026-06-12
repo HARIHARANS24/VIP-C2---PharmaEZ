@@ -1,0 +1,19 @@
+.product-card { display: flex; flex-direction: column; height: 100%; }
+.product-card-img-wrap { position: relative; aspect-ratio: 1; overflow: hidden; background: var(--bg-secondary); }
+.product-card-img { width: 100%; height: 100%; object-fit: contain; padding: 10px; transition: transform 0.3s ease; }
+.product-card:hover .product-card-img { transform: scale(1.05); }
+.product-card-discount { position: absolute; top: 10px; left: 10px; background: var(--danger); color: #fff; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 4px; }
+.product-card-rx { position: absolute; top: 10px; right: 36px; background: #fde8e8; color: var(--danger); font-size: 10px; font-weight: 800; padding: 2px 6px; border-radius: 4px; border: 1px solid #fca5a5; }
+.product-card-wishlist { position: absolute; top: 8px; right: 8px; background: rgba(255,255,255,0.9); border: none; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--transition); }
+.product-card-wishlist:hover { background: #fde8e8; color: var(--danger); }
+.product-card-body { padding: 14px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.product-card-category { font-size: 11px; color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+.product-card-name { font-size: 14px; font-weight: 600; color: var(--text-primary); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.4; }
+.product-card-pack { font-size: 12px; color: var(--text-muted); }
+.product-card-rating { display: flex; align-items: center; gap: 4px; font-size: 12px; }
+.star-icon { color: #f59e0b; }
+.rating-count { color: var(--text-muted); }
+.product-card-price { display: flex; align-items: center; gap: 8px; margin-top: 4px; }
+.price-current { font-size: 17px; font-weight: 700; color: var(--text-primary); }
+.price-original { font-size: 13px; color: var(--text-muted); text-decoration: line-through; }
+.w-full { width: 100%; margin-top: auto; }
